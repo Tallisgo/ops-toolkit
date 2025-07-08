@@ -33,3 +33,9 @@ sudo apt install -y \
     software-properties-common
 
 sudo apt install -y docker-ce docker-ce docker-ce-cli containerd.io
+
+
+sudo systemctl enable docker 
+
+sudo usermod -aG docker tallis  # 将当前用户加入 docker 组
+newgrp docker                  # 刷新组权限（或重新登录）
